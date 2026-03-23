@@ -11,6 +11,8 @@ draft: false
 description: This guide will help you deploying a Kubernetes Ingress to expose Prometheus, Alertmanager and Grafana.
 ---
 
+> **Deprecation Notice:** The Kubernetes Ingress API and the nginx-ingress-controller referenced in this guide are [deprecated](https://kubernetes.io/blog/2025/11/11/ingress-nginx-retirement/). For new deployments, we recommend using the [Gateway API](exposing-prometheus-alertmanager-grafana-gateway-api.md) instead. This guide is retained for users with existing Ingress-based setups.
+
 In order to access the web interfaces via the Internet [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) is a popular option. This guide explains, how Kubernetes Ingress can be setup, in order to expose the Prometheus, Alertmanager and Grafana UIs, that are included in the [kube-prometheus](https://github.com/prometheus-operator/kube-prometheus) project.
 
 Note: before continuing, it is recommended to first get familiar with the [kube-prometheus](https://github.com/prometheus-operator/kube-prometheus) stack by itself.
