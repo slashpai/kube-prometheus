@@ -1,0 +1,22 @@
+apiVersion: perses.dev/v1alpha2
+kind: Perses
+metadata:
+  labels:
+    app.kubernetes.io/name: perses
+    app.kubernetes.io/part-of: kube-prometheus
+    app.kubernetes.io/version: 0.54.0
+  name: perses
+  namespace: monitoring
+spec:
+  config:
+    database:
+      file:
+        extension: json
+        folder: /perses/data
+    security:
+      cookie:
+        secure: false
+      enable_auth: false
+      readonly: false
+  containerPort: 8080
+  image: persesdev/perses:v0.54.0

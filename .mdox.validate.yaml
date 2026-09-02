@@ -20,3 +20,6 @@ validators:
   # StackOverflow returns 403 for automated requests.
   - regex: 'https:\/\/stackoverflow.com.*'
     type: "ignore"
+  # Ignore slack channel links as it is timing out.
+  - regex: 'https:\/\/kubernetes.slack.com.*'
+    type: "ignore"
